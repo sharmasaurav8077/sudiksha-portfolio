@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem; /* Ensures fixed navbar doesn't cover section headers */
+  }
+  body {
+    @apply font-sans bg-dark text-gray-200 antialiased overflow-x-hidden selection:bg-primary selection:text-dark;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+  section {
+    scroll-margin-top: 80px;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-dark-card backdrop-blur-md border border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.5)];
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gold-gradient bg-[length:200%_auto] animate-shimmer;
+  }
+  .gold-glow {
+    @apply shadow-[0_0_15px_rgba(212,175,55,0.3)];
+  }
+  .gold-glow-hover {
+    @apply hover:shadow-[0_0_20px_rgba(212,175,55,0.6)] transition-shadow duration-300;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/50 rounded-full hover:bg-primary transition-colors;
+}
