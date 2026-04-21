@@ -52,8 +52,8 @@ const About = () => {
             <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
                 { label: 'Experience', value: '2+ Yrs' },
-                { label: 'Projects', value: '15+' },
-                { label: 'Formulations', value: '50+' },
+                { label: 'Projects', value: '2.5K+' },
+                { label: 'Formulations', value: '1K+' },
                 { label: 'Awards', value: '2' },
               ].map((stat, i) => (
                 <div key={i} className="glass rounded-xl p-5 text-center border-t border-t-primary/30 hover:border-t-primary transition-colors duration-300 group">
